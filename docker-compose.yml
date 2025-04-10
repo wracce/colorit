@@ -29,11 +29,11 @@ services:
     volumes:
       - ./user-service:/app
 
-  colorizer:
-    build:
-      context: ./colorization-service
-    volumes:
-      - ./colorization-service:/app
+  # colorizer:
+  #   build:
+  #     context: ./colorization-service
+  #   volumes:
+  #     - ./colorization-service:/app
 
   nextjs:
     build:
@@ -51,7 +51,7 @@ services:
       - nestjs
       - nextjs
       - mongo-express
-      - colorizer
+      # - colorizer
 
 volumes:
   mongodb_data:
